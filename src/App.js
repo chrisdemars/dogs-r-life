@@ -22,8 +22,11 @@ class App extends Component {
     })
   }
 
+  getDogs = event => {
+    this.setState({ image: event.target })
+  }
+
   render() {
-    const { image } = this.state;
     return (
       <div>
         <header className="header">

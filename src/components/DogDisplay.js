@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import '../App.css';
-
 class DogDisplay extends Component {
   render() {
+    const { image } = this.state;
     return (
       <div>
-        <img src={ image } alt="Beautiful pitbulls!"/>
+        <img src={ this.image } alt="Beautiful pitbulls!"/>
       </div>
     );
   }

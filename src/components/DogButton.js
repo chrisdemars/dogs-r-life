@@ -5,7 +5,7 @@ class DogButton extends Component {
   render() {
     return (
       <div>
-          <button className='btn'>Get Dogs!</button>
+          <button className='btn' onClick={ this.getDogs }>Get Dogs!</button>
       </div>
     );
   }
