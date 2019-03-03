@@ -13,6 +13,10 @@ class App extends Component {
   }
 
   componentDidMount = () => {
+    this.getDogs();
+  }
+
+  getDogs() {
     axios.get('https://dog.ceo/api/breed/terrier-american/images/random')
     .then(response => {
       this.setState({ image: response.data.message });
@@ -22,12 +26,8 @@ class App extends Component {
     })
   }
 
-  getDogs(image) {
-    this.setState({ image });
-  }
-
   render() {
-    const { image } = this.setState;
+    const { image } = this.state;
     return (
       <div>
         <header className="header">
@@ -35,10 +35,10 @@ class App extends Component {
           <p>Having a bad day? Here is a dog that can cheer you up!</p>
         </header>
         <DogDisplay 
-          image={ this.state.image }
+          image={ image }
         />
         <DogButton
-          getDogImages={ this.getDogs.bind(this) }
+          onClick={ this.getDogs.bind(this) }
         />
       </div>
     );

@@ -1,19 +1,11 @@
-import React, { Component } from 'react';
-import '../App.css';
+import React from 'react';
 
-class DogButton extends Component {
-
-onChangeImage() {
-    this.props.getDogImages(this.state.image);
-}
-
-  render() {
-    return (
-      <div>
-          <button className='btn' onClick={ this.onChangeImage.bind(this) }>Get Dogs!</button>
-      </div>
-    )
-  }
+function DogButton(props) {
+  return (
+    <div>
+        <button className='btn' onClick={ props.onClick }>Get Dogs!</button>
+    </div>
+  )
 }
 
 export default DogButton;

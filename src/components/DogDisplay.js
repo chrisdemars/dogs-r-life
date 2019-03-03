@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
-import '../App.css';
-class DogDisplay extends Component {
-  render() {    
-    return (
-      <div>
-        <img src={ this.image } alt="Beautiful pitbulls!"/>
-      </div>
-    );
-  }
+import React from 'react';
+
+function DogDisplay(props) {
+  return (
+    <div>
+      <img src={ props.image } alt="Beautiful pitbulls!"/>
+    </div>
+  );
 }
 
 export default DogDisplay;
