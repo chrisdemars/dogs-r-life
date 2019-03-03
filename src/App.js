@@ -22,19 +22,24 @@ class App extends Component {
     })
   }
 
-  getDogs = event => {
-    this.setState({ image: event.target })
+  getDogs(image) {
+    this.setState({ image });
   }
 
   render() {
+    const { image } = this.setState;
     return (
       <div>
         <header className="header">
           <h1>Dogs R Life</h1>
           <p>Having a bad day? Here is a dog that can cheer you up!</p>
         </header>
-        <DogDisplay/>
-        <DogButton/>
+        <DogDisplay 
+          image={ this.state.image }
+        />
+        <DogButton
+          getDogImages={ this.getDogs.bind(this) }
+        />
       </div>
     );
   }
