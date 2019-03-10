@@ -7,11 +7,13 @@
     "react-dom": "^16.8.3",
     "react-scripts": "^2.1.8"
   },
+  "main": "./electron-starter.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron-start": "electron ."
   },
   "eslintConfig": {
     "extends": "react-app"
