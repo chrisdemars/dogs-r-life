@@ -1,11 +1,13 @@
 import React from 'react';
 
-function DogButton(props) {
-  return (
-    <div>
-        <button className='btn' onClick={ props.onClick }>Get Dogs!</button>
-    </div>
-  )
-}
+const DogButton = (props) => {
+    return (
+        <>
+            <button className='btn' onClick={props.onClick}>
+                Get Dogs!
+            </button>
+        </>
+    );
+};
 
 export default DogButton;
