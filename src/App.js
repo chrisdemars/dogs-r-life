@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import DogButton from './components/DogButton';
 import DogDisplay from './components/DogDisplay';
+
 import './App.css';
+
 import axios from 'axios';
 
 class App extends Component {
